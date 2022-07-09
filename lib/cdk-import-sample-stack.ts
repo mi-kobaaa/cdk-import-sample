@@ -4,7 +4,7 @@ import * as ecs from "aws-cdk-lib/aws-ecs";
 import * as elbv2 from "aws-cdk-lib/aws-elasticloadbalancingv2";
 import { Construct } from "constructs";
 
-export class EcsClusterSampleStack extends cdk.Stack {
+export class CdkImportSampleStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
@@ -21,7 +21,7 @@ export class EcsClusterSampleStack extends cdk.Stack {
           cidrMask: 24,
           name: "Private",
           subnetType: ec2.SubnetType.PRIVATE_WITH_NAT,
-        }
+        },
       ],
     });
 
@@ -69,7 +69,7 @@ export class EcsClusterSampleStack extends cdk.Stack {
     listener.addTargets("TargetGroup", {
       protocol: elbv2.ApplicationProtocol.HTTP,
       port: 3000,
-      targets: [service]
+      targets: [service],
     });
   }
 }
