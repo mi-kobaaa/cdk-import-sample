@@ -75,7 +75,9 @@ aws s3api put-bucket-encryption --bucket ばけっとねーむだよ！ --server
 下記2箇所のコメントアウトを外してください。
 
 `// import * as s3 from "aws-cdk-lib/aws-s3";`
+
 `// const bucket = new s3.Bucket(this, "AlbBucket");`
+
 
 続いてimportを実行します。
 
