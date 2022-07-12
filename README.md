@@ -113,6 +113,7 @@ no differenceが返ってくれば問題なくS3bucketのcdk取り込みが完�
 <img width="516" alt="image" src="https://user-images.githubusercontent.com/69611246/178483130-f1acea0b-1414-459b-8973-fb967be23f17.png">
 
 この状態でデプロイを継続するとALBのアクセスログがS3bucketに保存されるようになります。
+
 もちろんバケットポリシーもCDK側でよしなにしてくれています、やったね！
 
 
