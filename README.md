@@ -10,6 +10,7 @@
 一度でも実行している場合、パラメータストアでバージョンが適しているか確認しましょう！
 
 CDK自体を初めて触るよ！という方は`cdk bootstrap`を対象アカウントへ実行しておくする必要があります。
+
 [AWS公式](https://aws.amazon.com/jp/getting-started/guides/setup-cdk/module-two/)が分かりやすい手順を作ってくれているので確認しながらやってみましょう！
 
 
