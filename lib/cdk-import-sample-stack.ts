@@ -2,6 +2,7 @@ import * as cdk from "aws-cdk-lib";
 import * as ec2 from "aws-cdk-lib/aws-ec2";
 import * as ecs from "aws-cdk-lib/aws-ecs";
 import * as elbv2 from "aws-cdk-lib/aws-elasticloadbalancingv2";
+// import * as s3 from "aws-cdk-lib/aws-s3";
 import { Construct } from "constructs";
 
 export class CdkImportSampleStack extends cdk.Stack {
@@ -71,5 +72,11 @@ export class CdkImportSampleStack extends cdk.Stack {
       port: 3000,
       targets: [service],
     });
+
+    // s3の定義を追加
+    // const bucket = new s3.Bucket(this, "AlbBucket");
+
+    // 取り込んだbucketにalbのログを取り込む
+    // alb.logAccessLogs(bucket);
   }
 }
