@@ -13,12 +13,15 @@ CDK自体を初めて触るよ！という方は`cdk bootstrap`を対象アカ�
 ## 使い方
 
 任意のディレクトリへリポジトリをクローンします
+
 `git clone https://github.com/mi-kobaaa/cdk-import-sample.git`
 
 クローンしたディレクトリへ移動します
+
 `cd cdk-import-sample`
 
 必要なnodeモジュールをインストールしましょう！
+
 `npm install`
 
 これで準備は整いました！
@@ -65,6 +68,7 @@ bucket自体は一行目のコマンドで作成できますが、個人的な�
 続いてimportを実行します。
 
 ターミナル上で下記コマンドを実行してください。
+
 `cdk import`
 
 bucketnameを教えて！と聞かれますので作成したS3bucketの名前を入れてあげましょう
@@ -74,6 +78,7 @@ bucketnameを教えて！と聞かれますので作成したS3bucketの名前�
 <img width="634" alt="image" src="https://user-images.githubusercontent.com/69611246/178482564-24f042d2-bfe6-49dd-864d-ad6b61f59a1c.png">
 
 念の為、環境との差分をチェックしましょう。
+
 `cdk diff`
 
 no differenceが返ってくれば問題なくS3bucketのcdk取り込みが完了しています。
@@ -94,14 +99,17 @@ no differenceが返ってくれば問題なくS3bucketのcdk取り込みが完�
 この状態でデプロイを継続するとALBのアクセスログがS3bucketに保存されるようになります。
 もちろんバケットポリシーもCDK側でよしなにしてくれています、やったね！
 
+
 ## 後片付け
 
 CDKスタックを削除します。
+
 `cdk destroy`
 
 自動削除されないリソースがあるので手動削除します。
 - `作成したS3bucket`
 - `CdkImportSampleStack`から始まるCloudwatch loggroup
 - `sample-image`というECR内のイメージ
+
 
 # 以上で完了です！お疲れ様でした！
